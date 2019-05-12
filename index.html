@@ -14,21 +14,18 @@
           <button type="submit">Найти</button>
         </form>
         
-        <a class="header-bookmarks" href="#">Закладки:
-          <span class="bookmarks-indicator">0</span>
+        <a class="user-button bookmarks" href="#">Закладки:
+          <span class="bookmarks-counter counter">0</span>
         </a>
         
-        <a class="header-basket" href="#">Корзина:
-          <span class="basket-indicator">0</span>
+        <a class="user-button basket" href="#">Корзина:
+          <span class="basket-counter counter">10</span>
         </a>
         
         <a class="header-order" href="#">Оформить заказ</a>
       </div>
       <div class="header-middle">
-        <h1 class="header-title">Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для реммонта
-        </h1>
+        <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для реммонта</h1>
         
         <div class="header-contacts">
           <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -47,7 +44,7 @@
       
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a>Главная</a></li>
+          <li><a href="#">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -62,26 +59,41 @@
         <h2 class="visually-hidden">Рекламный блок</h2>
           
         <div class="promo-item promo-materials">
-          <h3>Материалы</h3>
-          <a class="promo-button" href="#">На любой вкус</a> 
+          <div class="promo-item-wrapper">
+            <h3>Материалы</h3>
+            <a class="promo-button" href="#">На любой вкус</a>
+          </div>
+          <div class="promo-item-icon materials-icon"></div>
         </div>
         <div class="promo-item promo-tools">
-          <h3>Инструмент</h3>
-          <a class="promo-button" href="#">На все случаи</a> 
+          <div class="promo-item-wrapper">
+            <h3>Инструмент</h3>
+            <a class="promo-button" href="#">На все случаи</a> 
+          </div>
+          <div class="promo-item-icon tools-icon"></div>
         </div>
         <div class="promo-item promo-technics">
-          <h3>Техника</h3>
-          <a class="promo-button" href="#">Для стройки</a> 
+          <div class="promo-item-wrapper">
+            <h3>Техника</h3>
+            <a class="promo-button" href="#">Для стройки</a> 
+          </div>
+          <div class="promo-item-icon technics-icon"></div>
         </div>
         
         <div class="promo-columns">
           <div class="promo-item promo-discounts">
-            <h3>Скидки 50%</h3>
-            <a class="promo-button" href="#">На 350 товаров</a>
+            <div class="promo-item-wrapper">
+              <h3>Скидки 50%</h3>
+              <a class="promo-button" href="#">На 350 товаров</a>
+            </div>
+            <div class="promo-item-icon discounts-icon"></div>
           </div>
           <div class="promo-item promo-delivery">
-            <h3>Доставка</h3>
-            <a class="promo-button" href="#">Бесплатно</a>
+            <div class="promo-item-wrapper">
+              <h3>Доставка</h3>
+              <a class="promo-button" href="#">Бесплатно</a>
+            </div>
+            <div class="promo-item-icon delivery-icon"></div>
           </div>
         </div>
           
@@ -106,7 +118,7 @@
             
           <ul class="slider-indicator">
             <li class="slider-indicator"></li>
-            <li class="slider-indicator slider-indicator-activ"></li>
+            <li class="slider-indicator active"></li>
           </ul>
         </div>
       </section>
@@ -119,7 +131,6 @@
         
         <ul class="products-list">
           <li class="product-item">
-            <h3 class="product-title">Перфоратор BOSCH BFG 9000</h3>
             <div class="product-order">
               <a class="buy-button" href="#">Купить</a>
               <a class="bookmarks-button" href="#">В закладки</a>
@@ -127,6 +138,7 @@
                 <img src="#" alt="Перфоратор BOSCH BFG 9000">
               </div>
             </div>
+            <h3 class="product-title">Перфоратор BOSCH BFG 9000</h3>
             <div class="product-price">
               <span class="price-discount">32500 р.</span>
               <span class="price-button">25500 Р.</span>
@@ -134,7 +146,6 @@
           </li>
           
           <li class="product-item">
-            <h3 class="product-title">Перфоратор BOSCH BFG 3000</h3>
             <div class="product-order">
               <a class="buy-button" href="#">Купить</a>
               <a class="bookmarks-button" href="#">В закладки</a>
@@ -142,6 +153,7 @@
                 <img src="#" alt="Перфоратор BOSCH BFG 3000">
               </div>
             </div>
+            <h3 class="product-title">Перфоратор BOSCH BFG 3000</h3>
             <div class="product-price">
               <span class="price-discount">22500 р.</span>
               <span class="price-button">15500 р.</span>
@@ -149,7 +161,6 @@
           </li>
           
           <li class="product-item">
-            <h3 class="product-title">Перфоратор BOSCH BFG 6000</h3>
             <div class="product-order">
               <a class="buy-button" href="#">Купить</a>
               <a class="bookmarks-button" href="#">В закладки</a>
@@ -157,6 +168,7 @@
                 <img src="#" alt="Перфоратор BOSCH BFG 6000">
               </div>
             </div>
+            <h3 class="product-title">Перфоратор BOSCH BFG 6000</h3>
             <div class="product-price">
               <span class="price-discount">30500 р.</span>
               <span class="price-button">25500 р.</span>
@@ -164,7 +176,6 @@
           </li>
           
           <li class="product-item">
-            <h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
             <div class="product-order">
               <a class="buy-button" href="#">Купить</a>
               <a class="bookmarks-button" href="#">В закладки</a>
@@ -172,6 +183,7 @@
                 <img src="#" alt="Перфоратор BOSCH BFG 2000">
               </div>
             </div>
+            <h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
             <div class="product-price">
               <span class="price-discount"></span>
               <span class="price-button">12500 р.</span>
@@ -232,11 +244,11 @@
         <ul class="service-slider-list">
           <li class="service-slider-item service-delivery service-slider-active">
             <h3 class="service-slider-title">Доставка</h3>
-            <p class="service-slider-text">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+            <p class="service-slider-text">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
           </li>
           <li class="service-slider-item service-guarantee">
             <h3 class="service-slider-title">Гарантия</h3>
-            <p class="service-slider-text">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его возгаранием,<br> вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br> сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+            <p class="service-slider-text">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
           </li>
           <li class="service-slider-item service-credit">
             <h3 class="service-slider-title">Кредит</h3>
@@ -334,12 +346,12 @@
         </ul>
         
         <div class="feedback">
-          <p>Обратная связь:</p>
+          <span>Обратная связь:</span>
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         
         <div class="developers">
-          <p>Разработано -</p>
+          <span>Разработано -</span>
           <a href="https://htmlacademy.ru">htmlacademy.ru</a>
         </div>
       </div>
