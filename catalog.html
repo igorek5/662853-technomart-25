@@ -9,17 +9,18 @@
       <div class="header-top">
         <a class="main-logo" href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
         
-        <form class="header-search" action="#" method="get">
-          <input class="search-input" type="search" name="search" placeholder="Поиск:">
-          <button type="submit">Найти</button>
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input class="search-input" type="search" id="search" name="search" placeholder="Поиск:">
+          <button type="submit"><span class="visually-hidden">Найти</span></button>
         </form>
         
         <a class="user-button bookmarks" href="#">Закладки:
-          <span class="bookmarks-counter counter">0</span>
+          <span class="bookmarks-counter counter" aria-label="Количество товаров в закладках">0</span>
         </a>
         
         <a class="user-button basket active" href="#">Корзина:
-          <span class="basket-counter counter">10</span>
+          <span class="basket-counter counter" aria-label="Количество товаров в корзине">10</span>
         </a>
         
         <a class="header-order" href="#">Оформить заказ</a>
@@ -30,14 +31,16 @@
         </p>
         
         <div class="header-contacts">
-          <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a class="header-phone" href="tel:+78125550555" aria-label="Номер телефона компании техномарт">+7 (812) 555-05-55</a>
+          <p class="header-address" aria-label="Адрес компании техномарт">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         
         <div class="user-navigation">
           <div class="user-profile">
-            <a href="#" class="user-profile-link">Равшан Джамшутович</a>
-            <a href="#" class="user-profile-exit"></a>
+            <a href="#" class="user-profile-link" aria-label="Профиль пользователя">Равшан Джамшутович</a>
+            <a href="#" class="user-profile-exit">
+              <span class="visually-hidden">Выйти из профиля пользователя</span>
+            </a>
           </div>
           
           <ul class="user-personal-list">  
@@ -80,6 +83,55 @@
         
         <section class="filters">
           <h3 class="filter-title">Фильтр:</h3>
+          
+          <form class="filter-products" action="https://echo.htmlacademy.ru" method="get">
+          
+            <fieldset>
+              <legend>Цена:</legend>
+              <input type="number">
+            </fieldset>
+
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <label for="filter-bosch">Bosch</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+                  <label for="filter-interskol">Интерскол</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label for="filter-makita">Makita</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label for="filter-dewalt">Dewalt</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label for="filter-hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-group" id="filter-accumulator" value="accumulator" checked>
+                  <label for="filter-accumulator">Аккумуляторные</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-group" id="filter-electric-network" value="electric-network">
+                  <label for="filter-electric-network">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filter-button" type="submit" >Показать</button>
+          </form>
         </section>
       </section>
     
@@ -96,8 +148,9 @@
           </ul>
             
           <div class="sorting-indicator">
-            <button class="sorting-indicator-max sorting-indicator-active"></button>
-            <button class="sorting-indicator-min"></button>
+            <button class="sorting-indicator-max sorting-indicator-active"><span class="visually-hidden">Сортировать по возрастанию</span></button>
+            
+            <button class="sorting-indicator-min"><span class="visually-hidden">Сортировать по убыванию</span></button>
           </div>
         </div>
         
@@ -256,9 +309,9 @@
     <footer class="main-footer">
       <div class="top-footer">
         <div class="left-column-footer">
-          <a class="main-logo footer-logo" href="index.html"><img src="img/logo-technomart.svg" width="136" height="21" alt="Техномарт"></a>
+          <a class="main-logo footer-logo"><img src="img/logo-technomart.svg" width="136" height="21" alt="Логотип компании Техномарт"></a>
           
-          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          <p class="footer-contacts" aria-label="Адрес и номер телефона компании Техномарт">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55</p>
         </div>
         
@@ -301,15 +354,21 @@
       <div class="bottom-footer">
         <p class="copyright-footer">© 2010–2017 Компания «Техномарт» Все права защищены</p>
         
-        <ul class="footer-social-list">
+        <ul class="footer-social-list" aria-label="Компания Техномарт в социальных сетях">
           <li>
-            <a class="social-button" href="#">Вконтакте</a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
           <li>
-            <a class="social-button" href="#">Фейсбук</a>  
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>  
           </li>
           <li>
-            <a class="social-button" href="#">Инстаграм</a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
         </ul>
         
@@ -323,7 +382,17 @@
           <a href="https://htmlacademy.ru">htmlacademy.ru</a>
         </div>
       </div>
-    
     </footer>
+    
+    <section class="modal modal-add-to-basket">
+      <h2 class="modal-title">Товар добавлен в корзину!</h2>
+      
+      <div class="modal-button-wrapper">
+        <a class="button modal-button" href="#">Оформить заказ</a>
+        <button class="button back-button" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal_close" type="button">Закрыть</button>
+    </section>
+    
   </body>
 </html>
