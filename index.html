@@ -12,15 +12,17 @@
         <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
           <input class="search-input" type="search" id="search" name="search" placeholder="Поиск:">
-          <button type="submit"><span class="visually-hidden">Найти</span></button>
+          <button type="submit">
+            <span class="visually-hidden">Найти</span>
+          </button>
         </form>
         
         <a class="user-button bookmarks" href="#">Закладки:
-          <span class="bookmarks-counter counter" aria-label="Количество товаров в закладках">0</span>
+          <span class="bookmarks-counter counter">0</span>
         </a>
         
         <a class="user-button basket" href="#">Корзина:
-          <span class="basket-counter counter" aria-label="Количество товаров в корзине">0</span>
+          <span class="basket-counter counter">0</span>
         </a>
         
         <a class="header-order" href="#">Оформить заказ</a>
@@ -30,8 +32,8 @@
         <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для реммонта</h1>
         
         <div class="header-contacts">
-          <a class="header-phone" href="tel:+78125550555" aria-label="Номер телефона компании техномарт">+7 (812) 555-05-55</a>
-          <p class="header-address" aria-label="Адрес компании техномарт">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         
         <ul class="user-navigation">
@@ -39,7 +41,7 @@
             <a class="login-link" href="#" aria-label="Войти в личный кабинет">Войти</a>
           </li>
           <li>
-            <a class="register-link" href="#" aria-label="Зарегистрироваться в личном кабинете">Регистрация</a>
+            <a class="register-link" href="#">Регистрация</a>
           </li>
         </ul>
       </div>
@@ -296,7 +298,7 @@
         <div class="left-column-footer">
           <a class="main-logo footer-logo"><img src="img/logo-technomart.svg" width="136" height="21" alt="Логотип компании Техномарт"></a>
           
-          <p class="footer-contacts" aria-label="Адрес и номер телефона компании Техномарт">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55</p>
         </div>
         
@@ -387,7 +389,9 @@
         </p>
           <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="modal_close" type="button">Закрыть</button>
+      <button class="modal_close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
     
     <section class="modal modal-map">
@@ -395,7 +399,9 @@
       
       <img src="img/map/map-max.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       
-      <button class="modal_close" type="button">Закрыть</button>
+      <button class="modal_close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
     
     <section class="modal modal-add-to-basket">
@@ -405,7 +411,9 @@
         <a class="button modal-button" href="#">Оформить заказ</a>
         <button class="button back-button" type="button">Продолжить покупки</button>
       </div>
-      <button class="modal_close" type="button">Закрыть</button>
+      <button class="modal_close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
     
   </body>
