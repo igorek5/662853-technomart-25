@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -36,14 +39,16 @@
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         
-        <ul class="user-navigation">
-          <li>
-            <a class="login-link" href="#" aria-label="Войти в личный кабинет">Войти</a>
-          </li>
-          <li>
-            <a class="register-link" href="#">Регистрация</a>
-          </li>
-        </ul>
+        <div class="user-navigation">
+          <ul class="login-navigation">
+            <li class="login-navigation-item">
+              <a class="login-link" href="#" aria-label="Войти в личный кабинет">Войти</a>
+            </li>
+            <li class="login-navigation-item">
+              <a class="register-link" href="#">Регистрация</a>
+            </li>
+          </ul>
+        </div>
       </div>
       
       <nav class="main-navigation">
@@ -110,13 +115,13 @@
               <img class="slider-image" src="img/promo/slider1.jpg" width="620" height="266" alt="Перфораторы">
               <h4 class="slider-title">Перфораторы</h4>
               <p class="slider-text">Настоящие мужские игрушки</p>
-              <a class="button" href="catalog.html"></a>
+              <a class="button" href="catalog.html">Открыть каталог</a>
             </li>
             <li class="slider-item">
               <img class="slider-image" src="img/promo/slider2.jpg" width="620" height="266" alt="Дрели">
               <h4 class="slider-title">Дрели</h4>
               <p class="slider-text">Соседям на радость!</p>
-              <a class="button" href="#"></a>
+              <a class="button" href="#">Открыть каталог</a>
             </li>
           </ul>
             
@@ -387,7 +392,9 @@
           <label for="message-text">Текст письма:</label>
           <textarea id="message-text" name="text" rows="" placeholder="В свободной форме"></textarea>
         </p>
+        <div class="modal-message-wrapper">
           <button class="button" type="submit">Отправить</button>
+        </div>
       </form>
       <button class="modal_close" type="button">
         <span class="visually-hidden">Закрыть</span>
