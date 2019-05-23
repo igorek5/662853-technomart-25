@@ -20,6 +20,23 @@ img {
     height: auto;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually_hidden,
+input[type="radio"].visually_hidden {
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    
+    clip: rect (0 0 0 0);
+    overflow: hidden;
+}
+
 .button {
   font: inherit;
   
@@ -112,12 +129,12 @@ img {
   opacity: 0.6;
 }
 
-.active {
+.user-button-active {
   background-color: #ee3643;
 }
 
-.active:hover,
-.active:focus {
+.user-button-active:hover,
+.user-button-active:focus {
   background-color: #ca2c37
 }
 
@@ -182,9 +199,7 @@ img {
 }
 
 .login-navigation-item a:active {
-  color: #000000;
-  
-  opacity: 0.3;
+  color: rgba(0,0,0,0.3);
 }
 
 .main-navigation {
@@ -210,8 +225,9 @@ img {
 }
 
 .site-navigation a:active {
+  color: rgba(255,255,255,0.5);
+  
   background-color: #1d2739;
-  opacity: 0.5;
 }
 
 .promo-item {
@@ -350,7 +366,10 @@ img {
 }
 
 .bookmarks-button:active {
-  opacity: 0.3;
+  color: rgba(50,66,92,0.3);
+  
+  border-color: rgba(50,66,92,0.3);
+  
 }
 
 .product-title {
@@ -585,6 +604,10 @@ img {
   color: #ee3643;
 }
 
+.modal {
+  display: none;
+}
+
 .modal-message {
   border-top: 7px solid #ff5257;
   box-shadow: 0 20px 40px 0 rgba(0,0,0,0.75);
@@ -652,9 +675,8 @@ img {
 }
 
 .back-button:active {
-  color: #000000;
+  color: rgba(0,0,0,0.3);
   
-  opacity: 0.3;
   background-color: #ffffff;
 }
 
@@ -674,7 +696,7 @@ img {
 }
 
 .user-profile-link:active {
-  opacity: 0.3
+  color: rgba(0,0,0,0.3)
 }
 
 .user-personal-list {
@@ -694,9 +716,7 @@ img {
 }
 
 .user-personal-list a:active {
-  color: #32425c;
-  
-  opacity: 0.3;
+  color: rgba(50,66,92,0.3);
 }
 
 .breadcrumbs {
