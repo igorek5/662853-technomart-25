@@ -229,7 +229,6 @@ input[type="radio"].visually_hidden {
 .login-navigation {
   margin: 0;
   padding: 0;
-  padding-left: 19px;
   width: 300px;
   
   list-style: none;
@@ -284,11 +283,18 @@ input[type="radio"].visually_hidden {
 }
 
 .promo {
+  padding-top: 60px;
+  margin-bottom: 53px;
+}
+
+.promo-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 60px;
-  margin-bottom: 53px;
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
 }
 
 .promo-item {
@@ -340,7 +346,7 @@ input[type="radio"].visually_hidden {
   background-repeat: no-repeat;
 }
 
-.promo-item h3 {
+.promo-item-title {
   margin: 0;
   
   font-weight: bold;
@@ -379,8 +385,19 @@ input[type="radio"].visually_hidden {
   background-color: #8ed78f;
 }
 
-.promo-columns {
+.promo-advantage {
   order: 1;
+}
+
+.advantage-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.slider {
+  width: 620px;
 }
 
 .slider-list {
