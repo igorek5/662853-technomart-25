@@ -398,22 +398,25 @@
       <h2 class="visually-hidden">Напишите нам</h2>
       
       <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-message-item">
-          <label for="user-name">Ваше имя:</label>
-          <input id="user-name" type="text" name="user" value="" placeholder="Имя Фамилия">
-        </p>
-        <p class="modal-message-item">
-          <label for="user-email">Ваш e-mail:</label>
-          <input id="user-email" type="email" name="email" value="" placeholder="email@example.com">
-        </p>
-        <p class="modal-message-item">
-          <label for="message-text">Текст письма:</label>
-          <textarea id="message-text" name="text" rows="" placeholder="В свободной форме"></textarea>
-        </p>
+        <div class="form-container">
+          <p class="modal-message-item">
+            <label for="user-name">Ваше имя:</label>
+            <input id="user-name" type="text" name="user" value="" placeholder="Имя Фамилия">
+          </p>
+          <p class="modal-message-item">
+            <label for="user-email">Ваш e-mail:</label>
+            <input id="user-email" type="email" name="email" value="" placeholder="email@example.com">
+          </p>
+          <p class="modal-message-item">
+            <label for="message-text">Текст письма:</label>
+            <textarea class="modal-message-text" id="message-text" name="text" rows="5" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
         <div class="modal-message-wrapper">
-          <button class="button" type="submit">Отправить</button>
+          <button class="button modal-message-button" type="submit">Отправить</button>
         </div>
       </form>
+      
       <button class="modal_close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>

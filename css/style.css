@@ -459,8 +459,8 @@ input[type="radio"].visually-hidden {
   content: "";
   
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
   
   width: 60px;
   height: 59px;
@@ -1425,17 +1425,50 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-message {
+  position: relative;
+  
+  width: 620px;
+  padding-top: 53px;
+  
   border-top: 7px solid #ff5257;
   box-shadow: 0 20px 40px 0 rgba(0,0,0,0.75);
 }
 
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.modal-message-item input[type="text"],
+.modal-message-item input[type="email"] {
+  width: 220px;
+}
+
+.modal-message-text {
+  width: 460px;
+  min-height: 114px;
+  
+  resize: none;
+}
+
 .modal-message-item label {
+  display: block;
+  margin-bottom: 8px;
+  
   font-size: 18px;
   line-height: 18px;
 }
 
 .modal-message-item input,
 .modal-message-item textarea {
+  box-sizing: border-box;
+  
+  padding: 10px 15px;
+  
   border: 2px solid #d7dcde;
   border-radius: 3px;
   
@@ -1457,27 +1490,83 @@ input[type="radio"].visually-hidden {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #a9a9a9;
+  color: *#a9a9a9;
 }
 
 .modal-message-wrapper {
+  padding-left: 80px;
+  padding-right: 80px;
+  
   background: #f4f4f4;
 }
 
+.modal-message-button {
+  width: 100%;
+  margin-top: 37px;
+  margin-bottom: 37px;
+}
+
 .modal-map {
+  position: relative;
+  
+  width: 940px;
+  height: 446px;
+  
   box-shadow: 0 0 16px 0 rgba(47,42,43,0.5)
 }
 
 .modal-add-to-basket  {
+  
+  width: 620px;
+  padding-top: 55px;
+  
   border-top: 7px solid #ff5257;
   box-shadow: 0 20px 40px 0 rgba(41,52,73,0.75);
 }
 
+.modal-add-to-basket .modal-title {
+  position: relative;
+  
+  margin: 0;
+  padding-left: 40px;
+  margin-bottom: 68px;
+  
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.modal-add-to-basket .modal-title::before {
+  content: "";
+  
+  position: absolute;
+  top: -20px;
+  left: 80px;
+  
+  width: 66px;
+  height: 66px;
+  
+  background-image: url("../img/svg/form-1.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  
+}
+
 .modal-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  padding: 37px 80px;
   background-color: #f1f1f1;
 }
 
+
+
 .back-button {
+  width: 220px;
+  
   color: #000000;
   
   background-color: #ffffff;
@@ -1496,6 +1585,9 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.modal-button {
+  width: 220px;
+}
 
 /*catolog*/
 
@@ -1786,6 +1878,8 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/svg/checkbox-off.svg);
   background-position: 0 0;
   background-repeat: no-repeat;
+  
+  opacity: 0.79;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1800,6 +1894,17 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   background-repeat: no-repeat;
 }
+
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox:checked + label:hover::before {
+  opacity: 1;
+}
+
+.filter-input-checkbox + label:active::before,
+.filter-input-checkbox:checked + label:active::before {
+  opacity: 0.3;
+}
+
 
 .filter-input-radio + label::before {
   content: "";
@@ -1827,6 +1932,19 @@ input[type="radio"].visually-hidden {
   
   background-color: #c5c5c5;
   border-radius: 50%;
+}
+
+.filter-input-radio + label:hover::before {
+  border-color: #b5b5b5;
+}
+
+.filter-input-radio:checked + label:hover::after {
+  background-color: #b5b5b5;
+}
+
+.filter-input-radio + label:active::before,
+.filter-input-radio:checked + label:active::after {
+  opacity: 0.3;
 }
 
 .filter-input:hover + label {
@@ -1870,9 +1988,8 @@ input[type="radio"].visually-hidden {
 
 .catalog-sorting {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
-  padding: 10px 19px 11px;
+  padding: 10px 20px;
   
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1885,6 +2002,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-sorting-title {
   margin: 0;
+  margin-right: 10px;
   width: 220px;
   
   font-size: 13px;
@@ -1903,10 +2021,11 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 380px;
+  width: 355px;
   margin: 0;
-  padding: 0;
   padding-right: 25px;
+  padding: 0;
+  
   
   text-transform: uppercase;
   list-style: none;
@@ -1944,7 +2063,52 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-indicator {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   width: 43px;
+}
+
+.sorting-indicator-max {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  
+  width: 0;
+  height: 0;
+  
+  border-bottom-width: 11px;
+  border-left-width: 6px;
+  border-right-width: 6px;
+  border-top-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #c5c5c5;
+}
+
+.sorting-indicator-max.active {
+  border-bottom-color: #ee3643;
+}
+
+.sorting-indicator-min {
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  
+  width: 0;
+  height: 0;
+  
+  border-top-width: 11px;
+  border-left-width: 6px;
+  border-right-width: 6px;
+  border-bottom-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #c5c5c5;
+}
+
+.sorting-indicator-min.active {
+  border-top-color: #ee3643;
 }
 
 .pagination-list {
@@ -1952,12 +2116,13 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 32px;
   margin-bottom: 60px;
   
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
   
   list-style: none;
 }
@@ -1971,12 +2136,23 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-link {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 14px;
+  padding-left: 15px;
+  
   color: #000000;
   text-align: center;
   vertical-align: middle;
   
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+}
+
+.pagination-link-next {
+  padding-left: 31px;
+  padding-right: 31px;
 }
 
 .pagination-link:hover,
@@ -1988,7 +2164,9 @@ input[type="radio"].visually-hidden {
   border-color: #ee3643;
 }
 
-.pagination-link-active {
+.pagination-link.active {
+  color: #ffffff;
+  
   background-color: #ee3643;
   border-color: #ee3643;
 }
@@ -2001,7 +2179,7 @@ input[type="radio"].visually-hidden {
 
 .description {
   padding-top: 65px;
-  padding-bottom: 70px;
+  padding-bottom: 68px;
   
   color: #000000;
   
@@ -2010,7 +2188,7 @@ input[type="radio"].visually-hidden {
 
 .description-title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   
   font-size: 30px;
   line-height: 30px;
