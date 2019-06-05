@@ -105,11 +105,24 @@
 
                 <fieldset>
                   <legend>Цена:</legend>
-                  
+                    <div class="range-filter">
+                      <div class="range-controls">
+                        <div class="scale">
+                          <div class="bar"></div>
+                        </div>
+                        <div class="toggle toggle-min"></div>
+                        <div class="toggle toggle-max"></div>
+                      </div>
+                      <div class="price-controls">
+                        <input name="min-price" type="text" value="0">
+                        <span class="price-controls-line">—</span> 
+                        <input name="max-price" type="text" value="30000">
+                      </div>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                  <legend>Производители:</legend>
+                  <legend class="filter-legend">Производители:</legend>
                   <ul>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
@@ -135,7 +148,7 @@
                 </fieldset>
 
                 <fieldset>
-                  <legend>Питание:</legend>
+                  <legend class="filter-legend">Питание:</legend>
                   <ul>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-group" id="filter-accumulator" value="accumulator" checked>
@@ -385,8 +398,8 @@
           </div>
 
           <div class="developers">
-            <span>Разработано -</span>
-            <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+            <span>Разработано — </span>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </div>
         </div>
       </div>
@@ -399,10 +412,12 @@
         <a class="button modal-button" href="#">Оформить заказ</a>
         <button class="button back-button" type="button">Продолжить покупки</button>
       </div>
-      <button class="modal_close" type="button">
+      <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    
+    <div class="overlay"></div>
     
   </body>
 </html>
