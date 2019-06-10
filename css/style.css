@@ -1246,6 +1246,8 @@ input[type="radio"].visually-hidden {
 .contacts-map {
   display: block;
   margin-bottom: 32px;
+  
+  cursor: pointer;
 }
 
 .contacts .button {
