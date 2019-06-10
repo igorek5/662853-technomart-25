@@ -1,3 +1,38 @@
+/*modal-add-to-basket*/
+
+var bayButton = document.querySelectorAll(".buy-button");
+var addToBasket = document.querySelector(".modal-add-to-basket");
+var modalButton = addToBasket.querySelector(".modal-button");
+var backButton = addToBasket.querySelector(".back-button");
+var addToBasketClose = addToBasket.querySelector(".modal-close");
+
+for (var i = 0; i < bayButton.length; i++) {
+  bayButton[i].addEventListener("click", function(evt) {
+  evt.preventDefault ();
+  addToBasket.classList.add("modal-active");
+  modalButton.focus();
+  });
+}
+
+addToBasketClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  addToBasket.classList.remove("modal-active");
+});
+
+backButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  addToBasket.classList.remove("modal-active");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (addToBasket.classList.contains("modal-active")) {
+      evt.preventDefault();
+      addToBasket.classList.remove("modal-active");
+    }
+  }
+});
+
 /*modal-message*/
 
 var messageButton = document.querySelector(".contacts .button");
@@ -10,43 +45,6 @@ var overlay = document.querySelector(".overlay");
 
 var isStorageSupport = true;
 var storage = "";
-
-/*modal-map*/
-
-var mapLink = document.querySelector(".contacts-map");
-var mapPopup = document.querySelector(".modal-map");
-var mapClose = mapPopup.querySelector(".modal-close");
-
-/*modal-add-to-basket*/
-
-var bayButton = document.querySelectorAll(".buy-button");
-var addToBasket = document.querySelector(".modal-add-to-basket");
-var modalButton = addToBasket.querySelector(".modal-button");
-var backButton = addToBasket.querySelector(".back-button");
-var addToBasketClose = addToBasket.querySelector(".modal-close");
-
-
-/*slider-service*/
-
-var deliveryButton = document.querySelector(".delivery-button");
-var guaranteeButton = document.querySelector(".guarantee-button");
-var creditButton = document.querySelector(".credit-button");
-
-var sliderDelivery = document.querySelector(".service-delivery");
-var sliderGuarantee = document.querySelector(".service-guarantee");
-var sliderCredit = document.querySelector(".service-credit");
-
-var serviceButton = document.querySelectorAll(".service-button");
-var serviceSliderItem = document.querySelectorAll(".service-slider-item");
-
-/*promo-slider*/
-
-var controlsButtonBack = document.querySelector(".controls-button-back");
-var controlsButtonNext = document.querySelector(".controls-button-next");
-var sliderItems = document.querySelectorAll(".slider-item");
-var sliderIndicators = document.querySelectorAll(".slider-indicator-item");
-var b = 0;
-
 
 try {
   storage = localStorage.getItem("userName");
@@ -98,7 +96,10 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-/*map*/
+/*modal-map*/
+var mapLink = document.querySelector(".contacts-map");
+var mapPopup = document.querySelector(".modal-map");
+var mapClose = mapPopup.querySelector(".modal-close");
 
 mapLink.addEventListener("click", function(evt) {
   evt.preventDefault ();
@@ -120,38 +121,19 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-/*modal-add-to-basket*/
-
-for (var i = 0; i < bayButton.length; i++) {
-  bayButton[i].addEventListener("click", function(evt) {
-  evt.preventDefault ();
-  addToBasket.classList.add("modal-active");
-  modalButton.focus();
-  });
-}
-
-addToBasketClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  addToBasket.classList.remove("modal-active");
-});
-
-backButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  addToBasket.classList.remove("modal-active");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (addToBasket.classList.contains("modal-active")) {
-      evt.preventDefault();
-      addToBasket.classList.remove("modal-active");
-    }
-  }
-});
-
 /*slider-service*/
+var deliveryButton = document.querySelector(".delivery-button");
+var guaranteeButton = document.querySelector(".guarantee-button");
+var creditButton = document.querySelector(".credit-button");
 
-    deliveryButton.addEventListener("click", function (evt) {
+var sliderDelivery = document.querySelector(".service-delivery");
+var sliderGuarantee = document.querySelector(".service-guarantee");
+var sliderCredit = document.querySelector(".service-credit");
+
+var serviceButton = document.querySelectorAll(".service-button");
+var serviceSliderItem = document.querySelectorAll(".service-slider-item");
+
+deliveryButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     for (var i = 0; i < serviceButton.length; i++) {
       serviceButton[i].classList.remove("active");
@@ -182,7 +164,14 @@ window.addEventListener("keydown", function (evt) {
       creditButton.classList.add("active");
   });
 
+
 /*promo-slider*/
+
+var controlsButtonBack = document.querySelector(".controls-button-back");
+var controlsButtonNext = document.querySelector(".controls-button-next");
+var sliderItems = document.querySelectorAll(".slider-item");
+var sliderIndicators = document.querySelectorAll(".slider-indicator-item");
+var b = 0;
 
   controlsButtonBack.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -208,5 +197,3 @@ window.addEventListener("keydown", function (evt) {
   sliderItems[b].classList.add("active");
   sliderIndicators[b].classList.add("active");
 });
-
-
