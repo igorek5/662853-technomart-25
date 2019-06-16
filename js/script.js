@@ -133,36 +133,36 @@ var sliderCredit = document.querySelector(".service-credit");
 var serviceButton = document.querySelectorAll(".service-button");
 var serviceSliderItem = document.querySelectorAll(".service-slider-item");
 
-      deliveryButton.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      for (var i = 0; i < serviceButton.length; i++) {
-      serviceButton[i].classList.remove("active");
-      serviceSliderItem[i].classList.add("visually-hidden");
-    };
-      deliveryButton.classList.add("active");
-      sliderDelivery.classList.remove("visually-hidden");
-  });
+deliveryButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var i = 0; i < serviceButton.length; i++) {
+    serviceButton[i].classList.remove("active");
+    serviceSliderItem[i].classList.add("visually-hidden");
+  };
+    deliveryButton.classList.add("active");
+    sliderDelivery.classList.remove("visually-hidden");
+});
 
-      guaranteeButton.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      for (var i = 0; i < serviceButton.length; i++) {
-      serviceButton[i].classList.remove("active");
-      serviceSliderItem[i].classList.add("visually-hidden");
-    };
-      guaranteeButton.classList.add("active");
-      sliderGuarantee.classList.remove("visually-hidden");
-  });
+guaranteeButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var i = 0; i < serviceButton.length; i++) {
+    serviceButton[i].classList.remove("active");
+    serviceSliderItem[i].classList.add("visually-hidden");
+  };
+    guaranteeButton.classList.add("active");
+    sliderGuarantee.classList.remove("visually-hidden");
+});
 
 
-   creditButton.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      for (var i = 0; i < serviceButton.length; i++) {
-      serviceButton[i].classList.remove("active");
-      serviceSliderItem[i].classList.add("visually-hidden");
-    };
-      creditButton.classList.add("active");
-      sliderCredit.classList.remove("visually-hidden");
-  });
+creditButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var i = 0; i < serviceButton.length; i++) {
+    serviceButton[i].classList.remove("active");
+    serviceSliderItem[i].classList.add("visually-hidden");
+  };
+    creditButton.classList.add("active");
+    sliderCredit.classList.remove("visually-hidden");
+});
 
 
 /*promo-slider*/
