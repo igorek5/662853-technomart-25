@@ -133,24 +133,24 @@ var sliderCredit = document.querySelector(".service-credit");
 var serviceButton = document.querySelectorAll(".service-button");
 var serviceSliderItem = document.querySelectorAll(".service-slider-item");
 
-deliveryButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    for (var i = 0; i < serviceButton.length; i++) {
+      deliveryButton.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      for (var i = 0; i < serviceButton.length; i++) {
       serviceButton[i].classList.remove("active");
-      serviceSliderItem[i].classList.remove("active");
+      serviceSliderItem[i].classList.add("visually-hidden");
     };
-      sliderDelivery.classList.add("active");
       deliveryButton.classList.add("active");
+      sliderDelivery.classList.remove("visually-hidden");
   });
 
       guaranteeButton.addEventListener("click", function (evt) {
       evt.preventDefault();
       for (var i = 0; i < serviceButton.length; i++) {
       serviceButton[i].classList.remove("active");
-      serviceSliderItem[i].classList.remove("active");
+      serviceSliderItem[i].classList.add("visually-hidden");
     };
-      sliderGuarantee.classList.add("active");
       guaranteeButton.classList.add("active");
+      sliderGuarantee.classList.remove("visually-hidden");
   });
 
 
@@ -158,10 +158,10 @@ deliveryButton.addEventListener("click", function (evt) {
       evt.preventDefault();
       for (var i = 0; i < serviceButton.length; i++) {
       serviceButton[i].classList.remove("active");
-      serviceSliderItem[i].classList.remove("active");
+      serviceSliderItem[i].classList.add("visually-hidden");
     };
-      sliderCredit.classList.add("active");
       creditButton.classList.add("active");
+      sliderCredit.classList.remove("visually-hidden");
   });
 
 
