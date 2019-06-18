@@ -85,10 +85,12 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header {
+  min-width: 960px;
   padding-bottom: 65px;
+  
   color: #000000;
   
-  background-color: #f3f7f9
+  background-color: #f3f7f9;
 }
 
 .header-top {
@@ -898,6 +900,8 @@ input[type="radio"].visually-hidden {
 }
 
 .buy-button {
+  position: relative;
+  
   margin-bottom: 8px;
   padding-top: 12px;
   padding-bottom: 11px;
@@ -916,6 +920,29 @@ input[type="radio"].visually-hidden {
 
 .buy-button:active {
   background-color: #518534;
+}
+
+.buy-button::before {
+  content: "";
+  
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  
+  width: 15px;
+  height: 15px;
+  
+  background-image: url("../img/svg/icon-basket.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  
+  opacity: 0.3;
+}
+
+.buy-button:hover::before,
+.buy-button:focus::before,
+.buy-button:active::before {
+  opacity: 1;
 }
 
 .bookmarks-button {
@@ -1085,6 +1112,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service {
+  min-width: 960px;
   padding-top: 65px;
   margin-bottom: 80px;
   
@@ -1210,10 +1238,6 @@ input[type="radio"].visually-hidden {
   
 }
 
-/*.service-slider-item.active {
-    display: block;
-}
-*/
 .service-slider-title {
   margin: 0;
   margin-bottom: 24px;
@@ -1251,19 +1275,19 @@ input[type="radio"].visually-hidden {
 }
 
 .service-delivery {
-  background-image: url("../img/service/delivery.jpg");
+  background-image: url("../img/service/service-delivery.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .service-guarantee {
-  background-image: url("../img/service/guarantee.jpg");
+  background-image: url("../img/service/service-guarantee.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .service-credit {
-  background-image: url("../img/service/credit.jpg");
+  background-image: url("../img/service/service-credit.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1368,6 +1392,8 @@ input[type="radio"].visually-hidden {
 }
 
 .top-footer {
+  min-width: 960px;
+  
   color: #ffffff;
   
   background-color: #32425c;
@@ -1404,7 +1430,7 @@ input[type="radio"].visually-hidden {
 .right-column-footer {
   width: 560px;
   padding-top: 38px;
-  padding-left: 13px;
+  padding-left: 12px;
 }
 
 .navigation-footer-list,
@@ -1412,9 +1438,6 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
@@ -1428,8 +1451,24 @@ input[type="radio"].visually-hidden {
   margin-bottom: 34px;
 }
 
+.navigation-footer-list li {
+  margin-right: 59px;
+}
+
+.navigation-footer-list li:nth-child(5) {
+  margin-right: 0;
+}
+
 .offers-footer-list {
   margin-left: 23px;
+}
+
+.offers-footer-list li {
+  margin-right: 59px;
+}
+
+.offers-footer-list li:nth-child(4) {
+  margin-right: 0;
 }
 
 .navigation-footer-link {
@@ -1453,6 +1492,7 @@ input[type="radio"].visually-hidden {
 }
 
 .bottom-footer {
+  min-width: 960px;
   padding-top: 37px;
   padding-bottom: 25px;
   
@@ -2666,6 +2706,7 @@ input[type="radio"].visually-hidden {
 }
 
 .description {
+  min-width: 960px;
   padding-top: 65px;
   padding-bottom: 68px;
   
