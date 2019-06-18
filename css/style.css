@@ -514,6 +514,11 @@ input[type="radio"].visually-hidden {
   z-index: 20;
 }
 
+.promo-list .new-flag::after {
+  top: 0px;
+  right: 0px;
+}
+
 .promo-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,58 +538,18 @@ input[type="radio"].visually-hidden {
 .promo-item {
   position: relative;
   
-  display: -webkit-box;
-  
-  display: -ms-flexbox;
-  
-  display: flex;
   width: 300px;
+  min-height: 123px;
   margin-bottom: 20px;
+  
+  padding-top: 21px;
+  padding-left: 23px;
+  padding-right: 140px;
+  padding-bottom: 22px;
   
   color: #ffffff;
   
   background-color: #ffbf47;
-}
-
-.promo-item-wrapper {
-  width: 160px;
-  padding-top: 21px;
-  padding-left: 23px;
-}
-
-.promo-item-icon {
-  width: 140px;
-  height: 123px;
-}
-
-.materials-icon {
-  background-image: url("../img/promo/materials-icon1.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.tools-icon {
-  background-image: url("../img/promo/tools-icon2.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.technics-icon {
-  background-image: url("../img/promo/technics-icon3.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.discounts-icon {
-  background-image: url("../img/promo/discounts-icon4.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.delivery-icon {
-  background-image: url("../img/promo/deliveryicon5.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .promo-item-title {
@@ -628,16 +593,37 @@ input[type="radio"].visually-hidden {
   margin-left: 1px;
 }
 
+.promo-materials {
+  background-image: url("../img/promo/materials-icon1.svg");
+  background-position: 83% center;
+  background-repeat: no-repeat;
+}
+
 .promo-tools {
   background-color: #3bbce3;
+  background-image: url("../img/promo/tools-icon2.svg");
+  background-position: 87% center;
+  background-repeat: no-repeat;
 }
 
 .promo-technics {
   background-color: #dc91d8;
+  background-image: url("../img/promo/technics-icon3.svg");
+  background-position: 86% center;
+  background-repeat: no-repeat;
 }
 
 .promo-discounts {
   background-color: #8ed78f;
+  background-image: url("../img/promo/discounts-icon4.svg");
+  background-position: 82% center;
+  background-repeat: no-repeat;
+}
+
+.promo-delivery {
+  background-image: url("../img/promo/deliveryicon5.svg");
+  background-position: 86% center;
+  background-repeat: no-repeat;
 }
 
 .promo-column {
